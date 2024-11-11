@@ -1,112 +1,42 @@
 @font-face {
-    font-family: font1;
-    src: url(assets/Pixel\ Bug.otf);
-  }
-body{
-    background: rgb(95,112,231);
+    font-family: text;
+    src: url(04B_30__.TTF);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+Body{
+    background: wheat;
+}
+.image{
+    position: relative;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
-    background: url(assets/saturday-calm.gif), url(assets/Pixel\ Art\ ”Space”\,\ Anna\ Versens.jpg),url(assets/bcg2.jpg) ;
-    background-repeat: repeat-x,repeat-x,repeat-y;
-    background-size: 280vh;
-    font-family: font1;
-}
-.top-container{
-    margin-top: 40px;
-    margin-left: 35%;
-    margin-right: 35%;
-    width: 500px;
-    padding: 15px;
-    border-radius: 20px;
-    display: flex;
     justify-content: center;
-    position: relative;
-    background: transparent;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 3px 0 rgba(53, 25, 25, 0.9);
-    
-}
-.home,
-.project,.about{
-    text-decoration: none;
-    color: gray;
-    font-size: 25px;
-    font-family: font1;
-    margin: 10px;
-    padding-top: 5px;padding-left: 10px;padding-right: 10px;
-    padding-bottom: 5px; 
-    position: relative;
-    z-index: 1; 
-}
-.intro-container{
-    background-color: rgb(95,112,231) ;
-    border-radius: 20px;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.9);
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-    margin-right: 25%;
-    margin-left: 25%;
-    padding: 80px;
-    
-}
-.discription{
-    color: black;
-    font-family: font1;
-}
-.icon{
-    height: 20%;
-    width: 20%;  
-    margin-left: 40%; 
-    border-radius: 100px;
-    border-image: url(image.png);
-    position: relative;
-    animation: infinite;
-}
-.socials{
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-.socmed{
-    height: 40px;
-    margin: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 100px;
-}
-.About-container{
-    background-color: transparent;
-    color: white;
-    backdrop-filter: blur(30px);
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin-top: 50%;
-    margin-right: 25%;
-    margin-left: 25%;
-    padding: 80px;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.9);
-}
-.projects{
-    background-color: transparent;
-    color: white;
-    backdrop-filter: blur(30px);
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin-top: 15%;
-    margin-right: 25%;
-    margin-left: 25%;
-    padding: 80px;
-    height: 700px;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.9);
-}
-a{
-    text-decoration: none;
-    color: gray;
-    font-size: 15px;
-}
+    align-items: center;
+    padding: 0;
 
+}
+#loptop{
+    transition: transform 0.4s ease-in-out;
+}
+.enlarged{
+    transform: scale(2);
+}
+#btn{
+    width: 170px;
+    height: 70px;
+    border-radius: 20px;
+    font-family: text;
+}
+.text{
+    position: absolute;
+    left: 31%;
+    font-family: text;  
+    font-size: 20px;
+    
+}
 
 

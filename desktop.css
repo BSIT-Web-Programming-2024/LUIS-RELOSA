@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+Body{
+    background: lightblue;
+}
+footer{
+    position: absolute;
+    color: white;
+    background: black;
+    height: 70px;
+    width: 100%;
+    top: 95%;
+}
+.Icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+.folder, .note, .computer, .home{
+    position: relative;
+    width: 80px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.t1, .t2, .t4{
+    margin-left: 70px;
+}
+.t3{
+    margin-left: 60px;
+}
