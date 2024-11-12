@@ -19,6 +19,7 @@ Body{
     padding: 0;
 
 }
+
 #loptop{
     transition: transform 0.4s ease-in-out;
 }
@@ -35,8 +36,13 @@ Body{
     position: absolute;
     left: 31%;
     font-family: text;  
-    font-size: 20px;
-    
+    font-size: 20px; 
+}
+.coffee{
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    opacity: 80%;
 }
 
 

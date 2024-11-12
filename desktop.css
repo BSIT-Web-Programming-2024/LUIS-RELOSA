@@ -1,3 +1,7 @@
+@font-face {
+    font-family: catext;
+    src: url(04B_30__.TTF);
+}
 *{
     padding: 0;
     margin: 0;
@@ -6,12 +10,15 @@ Body{
     background: lightblue;
 }
 footer{
-    position: absolute;
+    display: flex;
+    position: relative;
     color: white;
-    background: black;
+    margin-top: 90px;
+    background: linear-gradient(135deg, #b8b8b8, #f0f0f0, #c0c0c0, #8e8e8e);
     height: 70px;
     width: 100%;
-    top: 95%;
+    align-items: baseline;
+    justify-content: baseline;
 }
 .Icons{
     display: flex;
@@ -30,4 +37,24 @@ footer{
 }
 .t3{
     margin-left: 60px;
+}
+.cat{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    height: 80%;
+    opacity: 60%;
+}
+.catalk{
+    background: white;
+    padding: 40px;
+    top: 25%;
+    left: 60%;
+    border-radius: 15px;
+    border-style: ridge;
+    border-color: black;
+    position: absolute;
+    font-family: catext;
+    opacity: 60%;
+    
 }
