@@ -1,48 +1,288 @@
 @font-face {
-    font-family: text;
-    src: url(04B_30__.TTF);
+    font-family: cool;
+    src: url(Equila.ttf);
+}
+@font-face {
+    font-family: astig;
+    src: url(GarotaSans-Regular-FFP.ttf);
+}
+@font-face {
+    font-family: pogi;
+    src: url(Arcane\ Nine.otf);
 }
 *{
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
-Body{
-    background: wheat;
-}
-.image{
-    position: relative;
-    margin-top: 10%;
+body{
     display: flex;
     flex-direction: column;
+    background: #C9E6F0;
+}
+.navigation-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+}
+.navigation a{
+    margin-right: 50px;
+    text-decoration: none;
+    color: black;
+}
+.home-container{
+    display: flex;
+    background: #E5E1DA;
+    width: 100%;
+    height: 100vh;
+}
+.home-container::after{
+    content: '';
+    position: absolute;
+    display: flex;
+    top: 103%;
+    width: 100%;
+    height: 50px;
+    background: #E5E1DA;
+    z-index: 10;
+    box-shadow: 0px 10px 13px #E5E1DA;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    height: 300px;
+    padding: 30px;
+}
+.home h1{
+    display: flex;
+    flex-direction: column;
+    color: #EC8305;
+}
+.home h2 {
+    margin-left: 100px;
+}
+.home h3{
+    font-weight: bold;
+    font-style: italic;
+    color: #091057;
+}
+.home p{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: astig;
+}
+.n2{
+    color: red;
+    font-weight: bolder;
+}
+.model1{
+    display: flex;
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    z-index: 5;
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #4A628A;
+    width: 100%;
+    height: 150vh;
+    z-index: 9;
+   
+}
+.about{
+    display: flex;
+    background: transparent;
     justify-content: center;
     align-items: center;
-    padding: 0;
-
+    margin-top: 30px;
+    font-size: 50px;
+    font-family: cool;
 }
-
-#loptop{
-    transition: transform 0.4s ease-in-out;
-}
-.enlarged{
-    transform: scale(2);
-}
-#btn{
-    width: 170px;
-    height: 70px;
+.me{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #2A3335;
     border-radius: 20px;
-    font-family: text;
+    height: 200px;
+    width: 30%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-200%);
+    color: #0A97B0;
+    z-index: 99;
 }
-.text{
+.me h2 {
+    font-family: cool;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.me p {
+    font-family: pogi;
+    font-size: 15px;
+}
+.achievement{
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    background-color: #2A3335;
+    color: #0A97B0;
+    border-radius: 20px;
+    height: 200px;
+    width: 30%;
+    padding: 5px;
+    align-items: center;
+    transform: translateX(300%);
+    justify-content: center;
+    z-index: 99;
+    
+}
+.achievement h2{
+    font-family: cool;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.achievement li{
+    font-family: pogi;
+    margin-right: 60%;
+    margin-top: 10px;
+}
+.Education{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #2A3335;
+    color: #0A97B0;
+    border-radius: 20px;
+    height: 200px;
+    width: 30%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-200%);
+    z-index: 99;
+}
+.Education h2{
+    font-family: cool;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.Education li{
+    font-family: pogi;
+    text-align: left;
+    margin-top: 10px;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    background-color: #2A3335;
+    position: relative;
+    color: #0A97B0;
+    border-radius: 20px;
+    height: 200px;
+    width: 30%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(500%);
+    z-index: 99;
+}
+.skills h2{
+    font-family: cool;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.skills li{
+    font-family: pogi;
+    text-align: left;
+    margin-top: 10px;
+}
+.Hobbies{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #2A3335;
+    color: #0A97B0;
+    border-radius: 20px;
+    height: 200px;
+    width: 30%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-146%);
+    z-index: 99;
+}
+.Hobbies h2{
+    font-family: cool;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.Hobbies li{
+    font-family: pogi;
+    text-align: left;
+    margin-top: 10px;
+}
+.quote{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    font-style: italic;
+    font-family: cool;
+}
+.model4{
     position: absolute;
-    left: 31%;
-    font-family: text;  
-    font-size: 20px; 
+    display: flex;
+    margin-top: 10%;
+    margin-left: 40%;
+    height: 100%;
+    width: 20%;
+    z-index: 4;
 }
-.coffee{
-    position: absolute;
-    left: 25%;
-    top: 10%;
-    opacity: 80%;
+.projects-container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    background: #1A1A1D;
 }
-
-
+.model2{
+    margin-top: 50px;
+    width: 30%;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    
+}
+.btn{
+    width: 60px;
+    height: 20px;
+    margin-left: 40px;
+    margin-top: 150px;
+    background: gray;
+    border-style: hidden;
+    border-radius: 10px;
+    font-family: astig;
+    transition: box-shadow 1s, transform .5s, color .5s;
+}
+.btn:hover{
+    box-shadow: 4px 0px 10px  white;
+    transform: scale(1.1);
+    color: white;
+}
+.contact-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: wheat;
+}
