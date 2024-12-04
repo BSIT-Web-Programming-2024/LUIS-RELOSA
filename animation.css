@@ -10,3 +10,93 @@
 .model1:hover{
     transform: scale(1.2);
 }
+.projectbtn{
+ transition: color 1s, background .5s;
+}
+.projectbtn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 100%;
+    background: brown;
+    transform: skewX(35deg);
+    transition: width 1s;
+    z-index: -1;
+}
+.projectbtn:hover:before{
+    width: 100%;
+}
+.projectbtn:hover{
+    color: white;
+    background: black;
+}
+.projectbtn{
+ transition: color 1s, background .5s;
+}
+.projectbtn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 100%;
+    background: brown;
+    transform: skewX(35deg);
+    transition: width 1s;
+    z-index: -1;
+}
+.projectbtn:hover:before{
+    width: 100%;
+}
+.projectbtn:hover{
+    color: white;
+    background: black;
+}
+.projectbtn{
+    transition: color 1s, background .5s;
+   }
+   
+.contactbtn::before{
+       content: '';
+       position: absolute;
+       top: 0;
+       left: -20px;
+       width: 0;
+       height: 100%;
+       background: brown;
+       transform: skewX(35deg);
+       transition: width 1s;
+       z-index: -1;
+   }
+.contactbtn:hover:before{
+       width: 100%;
+   }
+.contactbtn:hover{
+       color: white;
+       background: black;
+   }
+
+@keyframes showContent {
+   to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+   }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+ }
+ .slider .list .item.active h2{
+    animation-delay: 1s;
+ }
+ .slider .list .item.active p:nth-child(3){
+    animation-duration: 1.3s;
+ }
+ 

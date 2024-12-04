@@ -1,36 +1,53 @@
 @font-face {
     font-family: cool;
-    src: url(Equila.ttf);
+    src: url(fonts/Equila.ttf);
 }
 @font-face {
     font-family: astig;
-    src: url(GarotaSans-Regular-FFP.ttf);
+    src: url(fonts/GarotaSans-Regular-FFP.ttf);
 }
 @font-face {
     font-family: pogi;
-    src: url(Arcane\ Nine.otf);
+    src: url(fonts/Arcane\ Nine.otf);
 }
 *{
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    
 }
 body{
     display: flex;
     flex-direction: column;
-    background: #C9E6F0;
+    background: #E5E1DA;
+    overflow-x: hidden;
 }
 .navigation-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: white;
+    background: transparent;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navigation-container img{
+    position: relative;
+    width: 3%;
+    height: 5%;
+    margin-left: 50px;
 }
 .navigation a{
     margin-right: 50px;
     text-decoration: none;
     color: black;
+    background-color: #E5E1DA ;
+    padding: 10px;
+    border-radius: 10px;
 }
 .home-container{
     display: flex;
@@ -38,17 +55,7 @@ body{
     width: 100%;
     height: 100vh;
 }
-.home-container::after{
-    content: '';
-    position: absolute;
-    display: flex;
-    top: 103%;
-    width: 100%;
-    height: 50px;
-    background: #E5E1DA;
-    z-index: 10;
-    box-shadow: 0px 10px 13px #E5E1DA;
-}
+
 .home{
     display: flex;
     flex-direction: column;
@@ -75,6 +82,25 @@ body{
     text-align: left;
     margin-top: 10px;
     font-size: 30px;
+    font-family: astig;
+}
+.homebtn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 20px;
+}
+.homebtn a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+    border:2px solid black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 30px;
+    overflow: hidden;
     font-family: astig;
 }
 .n2{
@@ -107,182 +133,149 @@ body{
     font-size: 50px;
     font-family: cool;
 }
-.me{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #2A3335;
-    border-radius: 20px;
-    height: 200px;
-    width: 30%;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-200%);
-    color: #0A97B0;
-    z-index: 99;
-}
-.me h2 {
-    font-family: cool;
-    font-size: 30px;
-    text-decoration: underline;
-}
-.me p {
-    font-family: pogi;
-    font-size: 15px;
-}
-.achievement{
-    display: flex;
-    position:relative;
-    flex-direction: column;
-    background-color: #2A3335;
-    color: #0A97B0;
-    border-radius: 20px;
-    height: 200px;
-    width: 30%;
-    padding: 5px;
-    align-items: center;
-    transform: translateX(300%);
-    justify-content: center;
-    z-index: 99;
-    
-}
-.achievement h2{
-    font-family: cool;
-    font-size: 30px;
-    text-decoration: underline;
-}
-.achievement li{
-    font-family: pogi;
-    margin-right: 60%;
-    margin-top: 10px;
-}
-.Education{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #2A3335;
-    color: #0A97B0;
-    border-radius: 20px;
-    height: 200px;
-    width: 30%;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-200%);
-    z-index: 99;
-}
-.Education h2{
-    font-family: cool;
-    font-size: 30px;
-    text-decoration: underline;
-}
-.Education li{
-    font-family: pogi;
-    text-align: left;
-    margin-top: 10px;
-}
-.skills{
-    display: flex;
-    flex-direction: column;
-    background-color: #2A3335;
-    position: relative;
-    color: #0A97B0;
-    border-radius: 20px;
-    height: 200px;
-    width: 30%;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(500%);
-    z-index: 99;
-}
-.skills h2{
-    font-family: cool;
-    font-size: 30px;
-    text-decoration: underline;
-}
-.skills li{
-    font-family: pogi;
-    text-align: left;
-    margin-top: 10px;
-}
-.Hobbies{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #2A3335;
-    color: #0A97B0;
-    border-radius: 20px;
-    height: 200px;
-    width: 30%;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-146%);
-    z-index: 99;
-}
-.Hobbies h2{
-    font-family: cool;
-    font-size: 30px;
-    text-decoration: underline;
-}
-.Hobbies li{
-    font-family: pogi;
-    text-align: left;
-    margin-top: 10px;
-}
-.quote{
-    text-align: center;
-    margin-top: 40px;
-    font-size: 30px;
-    font-style: italic;
-    font-family: cool;
-}
-.model4{
-    position: absolute;
-    display: flex;
-    margin-top: 10%;
-    margin-left: 40%;
-    height: 100%;
-    width: 20%;
-    z-index: 4;
-}
-.projects-container{
-    display: flex;
-    flex-direction: row;
+/* slider about*/
+.slider{
     height: 100vh;
-    width: 100%;
-    background: #1A1A1D;
-}
-.model2{
     margin-top: 50px;
-    width: 30%;
-}
-.projects{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    
-}
-.btn{
-    width: 60px;
-    height: 20px;
-    margin-left: 40px;
-    margin-top: 150px;
-    background: gray;
-    border-style: hidden;
-    border-radius: 10px;
-    font-family: astig;
-    transition: box-shadow 1s, transform .5s, color .5s;
-}
-.btn:hover{
-    box-shadow: 4px 0px 10px  white;
-    transform: scale(1.1);
+    position: relative;
     color: white;
 }
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.slider .list .item img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to top, black 40%, transparent
+    );
+}
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.slider .list .item .content p:nth-child(1){
+ text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.slider .list .item .content p{
+    font-size: 20px;
+    font-family: pogi;
+   }
+.slider .list .item .content h2{
+    font-size: 100px ;
+    margin: 0;
+}
+.slider .list .item.active{
+   opacity: 1;
+   z-index: 10;
+}
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 99999;
+}
+.arrows button{
+    background-color: #eee5;
+    border: none;
+    font-family: astig;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large ;
+    color: white;
+}
+.arrows button:hover{
+    background-color: white;
+    color: black;
+    
+}
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .items{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    flex-shrink: 0;
+}
+.thumbnail .items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; 
+}
+.thumbnail .items.active{
+    filter: brightness(1.5);
+
+}
+.thumbnail .items .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
 .contact-container{
-    height: 100vh;
+    position: relative;
+    display: flex;
     width: 100vw;
-    background-color: wheat;
+    margin-top: 43%;
+    height: 50vh;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+}
+.contact-container form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: astig;
+    color: black;
+}
+.contact-container form button{
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 105%;
+    left: 5%;
+}
+.socials a img {
+    width: 10%;
+    height: 10%;
+    margin: 20px;
 }

@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="animation.css" />
   </head>
   <body>
-    <header class="navigation-container">
-      <h2>LOGO</h2>
+    <header class="navigation-container" >
+    
+      <img src="img/Logo.webp" alt="">
       <nav class="navigation">
-        <a href="">Home</a>
-        <a href="#about-container">About</a>
-        <a href="">Project</a>
-        <a href="">Contact</a>
+        <a href="#">Home</a>
+        <a href="#slider">About</a>
+        <a href="projects.html">Project</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
     <div class="home-container">
-      <img src="model1.png" alt="" class="model1" id="model1" />
+      <img src="img/model1.webp" alt="" class="model1" id="model1" />
       <div class="home" id="home">
         <h1>Hi, Iam Luis Andrea T Relosa</h1>
         <h2>Web Developer and Game Developer</h2>
@@ -31,70 +32,98 @@
           ideas into reality. My goal is to create work <br />
           that not only inspires but delivers impact.
         </p>
+        <div class="homebtn">
+          <a href="projects.html" class="projectbtn">Project</a>
+          <a href="#contact" class="contactbtn">Contact</a>
+        </div>
       </div>
     </div>
-    <div class="about-container" id="about-container">
-      <img src="model4.png" alt="" class="model4">
-      <h1 class="about">About</h1>
-      <section class="me" id="me">
-        <h2>Who I'm I</h2>
-        <p>
-          Hello Once Again I'am Luis Andrea T Relosa an Aspiring <br />
-          Web Developer and Game developer. I'am 21 Years old and <br />
-          Currently now I'am a College student who majors in <br />
-          Bachelor in Science and Information Technology or BSIT <br />
-          in The College institute of Data Center of The Phillipines <br />
-          College Baguio Branch. I live in Tuding Itogon Benguet.
-        </p>
-      </section>
-      <section class="achievement" id="achievement">
-        <h2>Achievements</h2>
-        <li>NC2 Certificate Holder</li>
-        <li>Soon To Come</li>
-        <li>Soon To Come</li>
-        <li>Soon To Come</li>
-      </section>
-      <section class="Education" id="education">
-        <h2>Education</h2>
-        <li>Elementary (Tuding Elementary School)</li>
-        <li>HighSchool (Rizal National HighSchool)</li>
-        <li>Senior HighSchool (Alejo M Pacalso Memorial HighSchool)</li>
-        <li>College (Data Center of The Phillipines Baguio)</li>
-      </section>
-      <section class="skills" id="skills">
-        <h2>Skills</h2>
-        <h3>'This some set of skill I aquired through the years'</h3>
-        <li>Problem-Solving</li>
-        <li>Analyzing-Problems</li>
-        <li>Web Developement</li>
-        <li>Game Development</li>
-        <li>Computer Hardware Repair</li>
-      </section>
-      <section class="Hobbies" id="hobbies">
-        <h2>Hobbies</h2>
-        <h3>'This are the things I like to do'</h3>
-        <li>Playing BasketBall</li>
-        <li>Playing Video Games</li>
-        <li>Watching Animes and Movies</li>
-        <li>Playing With my Pets</li>
-        <li>Adventuring</li>
-      </section>
-      <h2 class="quote">
-        "You Can't Control The Wind But You Can Adjust Your Sails" <br> -Kid on Tiktok
-      </h2>
-    </div>
-    <div class="projects-container">
-      <h2>projects</h2>
-      <img src="model2.png" alt="" class="model2">
-      <div class=" projects">
-        <button class="btn">Show</button>
-        <button class="btn">Show</button>
-        <button class="btn">Show</button>
-        <button class="btn">Show</button>
-      </div>
-    </div>
-    <div class="contact-container">
-      <form action="save_contact.php" method="POST">
+   
+     <!-- Slider -->
+
+     <div class="slider" id="slider">
+        <div class="list">
+          <div class="item active">
+            <img src="img/images1.webp" alt="">
+            <div class="content">
+              <p>About</p>
+               <h2>Personal</h2>
+               <p>
+                Hello Once Again I'am Luis Andrea T Relosa an Aspiring 
+                Web Developer and Game developer. I'am 21 Years old and 
+                Currently now I'am a College student who majors in 
+                Bachelor in Science and Information Technology or BSIT 
+                in The College institute of Data Center of The Phillipines 
+                College Baguio Branch. I live in Tuding Itogon Benguet.
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/images2.webp" alt="">
+            <div class="content">
+              <p>About</p>
+               <h2>Achievement</h2>
+               <p>
+                Computer System Service Nc|| Receiver <br>
+                Soon to Come <br>
+                Soon to Come <br>
+                Soon to Come
+               </p>
+            </div>
+        </div>
+        <div class="item">
+          <img src="img/images3.webp" alt="">
+          <div class="content">
+            <p>About</p>
+             <h2>Hobbies</h2>
+             <p>
+              if i have time to spare I love Playing Sports such as Basketball and Badminton I 
+              also play VideoGames if I dont feel going outside and importantly I love socializing
+              to my friends and classmates. I also love adventuring and connect to mother nature.
+             </p>
+          </div>
+        </div>
+          <div class="item">
+            <img src="img/images4.webp" alt="">
+            <div class="content">
+              <p>About</p>
+               <h2>Education</h2>
+               <p>
+                Elementary (Tuding Itogon Benguet) <br>
+                HighSchool (Rizal National HighSchool) <br>
+                Senior HighSchool (Alejo M Pacalso Memorial HighSchool) <br>
+                College (Data Center of the Phillipines Baguio)
+               </p>
+            </div>
+          <!-- btn arrows -->
+          </div>
+          <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+          </div>
+          <!-- thumbnail-->
+           <div class="thumbnail">
+            <div class="items active">
+              <img src="img/images1.webp" alt="">
+              <div class="content">Personal</div>
+            </div>
+            <div class="items">
+              <img src="img/images2.webp" alt="">
+              <div class="content">Achievement</div>
+            </div>
+            <div class="items">
+              <img src="img/images3.webp" alt="">
+              <div class="content">Hobbies</div>
+            </div>
+            <div class="items">
+              <img src="img/images4.webp" alt="">
+              <div class="content">Education</div>
+            </div>
+           </div>
+        </div> 
+    <!-- PHP DATABASE USER INTERACTION -->
+    <div class="contact-container" id="contact">
+      <form action="save_contact.php" method="POST" >
         <h2>Save Contact Information</h2>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
@@ -105,6 +134,12 @@
         <button type="submit">Save</button>
     </form>
     </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/luis.ivan.7393264"><img src="img/facebook.webp" alt="Facebook"></a>
+      <a href="https://www.instagram.com/relosaluisluis/"><img src="img/instagram.webp" alt="Instagram"></a>
+      <a href="https://x.com/Relosaluis1"><img src="img/twitter (1).webp" alt="Twitter"></a>
+      <a href="https://github.com/LUISRELOSA"><img src="img/github.webp" alt="Github"></a>
+  </div>
     <script src="index.js"></script>
   </body>
 </html>
