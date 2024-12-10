@@ -1,9 +1,9 @@
 
 <?php
-// Database connection details
+// Database configuration
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root"; // Replace with your database username
+$password = ""; // Replace with your database password
 $dbname = "contact_db";
 
 // Create connection
@@ -14,40 +14,20 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if form data is received via POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Retrieve and sanitize user inputs
+$name = $conn->real_escape_string($_POST['name']);
+$email = $conn->real_escape_string($_POST['email']);
+$message = $conn->real_escape_string($_POST['message']);
 
-    // Sanitize and validate input data
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $contact = htmlspecialchars($_POST['contact'], ENT_QUOTES, 'UTF-8');
+// Insert data into the database
+$sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
 
-    // Validate email format
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Invalid email format");
-    }
-
-    // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare("INSERT INTO contacts (email, contact) VALUES (?, ?)");
-
-    // Check if the prepare method worked
-    if ($stmt === false) {
-        die("Error preparing the SQL statement: " . $conn->error);
-    }
-
-    // Bind parameters (s = string)
-    $stmt->bind_param("ss", $email, $contact);
-
-    // Execute the query
-    if ($stmt->execute()) {
-        echo "Contact information saved successfully!";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    // Close the statement and connection
-    $stmt->close();
+if ($conn->query($sql) === TRUE) {
+    echo "Your message has been saved. Thank you!";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-// Close the connection
+// Close connection
 $conn->close();
 ?>

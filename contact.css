@@ -1,0 +1,108 @@
+.contact-container{
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    background: black;
+    color: white;
+    position: relative;
+    top: 100%;
+    justify-content: center;
+}
+.contactME{
+    font-family: astig;
+    font-size: 25px;
+
+    position: absolute;
+}
+.form-container{
+    margin-top: 80px;
+     width: 30vw;
+     justify-content: center;
+
+}
+.name{
+    font-family: astig;
+}
+#name{
+    width: 50%;
+    height: 30px;
+    background: black;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.email{
+    font-family: astig;
+}
+#email{
+    width: 50%;
+    height: 30px;
+    background: black;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.message{
+    font-family: astig;
+}
+#message{
+    width: 80%;
+    height: 150px;
+    background: black;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.btnsub{
+    color: white;
+    background: black;    
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 20px;
+    font-family: astig;
+}
+.social{
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-290px, 0);
+    z-index: 99999;
+}
+.social a{
+    color: black;
+    background: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+    padding: 20px;
+    width: 300px;
+    text-align: right;
+    border-radius: 50px;
+    transition: transform 1s;
+    font-style: astig;
+}
+.social a:hover{
+    transform: translate(140px, 0);
+}
+.social i{
+    margin-left: 10px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+.social a:nth-child(1) i{
+    color: #1DA0F0;
+}
+.social a:nth-child(2) i{
+    color: #000;
+}
+.social a:nth-child(3) i{
+    color: pink;
+}
+.social a:nth-child(4) i{
+    color: #000;
+}
